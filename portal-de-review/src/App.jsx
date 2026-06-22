@@ -10,13 +10,10 @@ function App() {
       </div>
 
       <footer>
-        <div className="footer-section">
+
           <span>GitHub</span>
-          <a href='https://github.com/JonasFortunatoRosset' 
-          target='_blank' rel="noopener noreferrer">Jonas</a>
-          <a href='https://github.com/EmanuelReus6' 
-          target='_blank' rel="noopener noreferrer">Emanuel</a>
-        </div>
+          <a href='https://github.com/JonasFortunatoRosset' target='_blank'>Jonas Fortunato Rosset</a>
+          <a href='https://github.com/EmanuelReus6' target='_blank'>Emanuel Reus</a>
       </footer>
     </>
   )

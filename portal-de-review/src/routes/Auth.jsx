@@ -1,34 +1,46 @@
-import { useState } from 'react';
+import './Auth.css';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router';
+import useAuth from '../hooks/useAuth';
 
-const Auth = (API_BASE_URL) => {
+const Auth = ({API_BASE_URL}) => {
 
-    const [id, setId] = useState();
+    const [id, setId] = useState('');
+    const [submittedId, setSubmittedId] = useState('');
 
+    const { user, message, success } = useAuth(submittedId, API_BASE_URL);
 
-    const handleSubmit = (id, API_BASE_URL) => {
-        //  const { data, permission } = useAuth(id, API_BASE_URL);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (success && user){
+            navigate(`/products/${user.id}`, { replace: true });
+        }
+    }, [success, user]);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!id) {
+            return;
+        }
+        setSubmittedId(id);
     }
-
-    
-
-    console.log(API_BASE_URL, id);
-
 
     return(
         <>
-            <div id="container">
-                <div id="content-container">
-                    <h1>FALKON</h1>
-                    <div>
-                        <h1>Login de Usuário</h1>
-                        <form onSubmit={handleSubmit(id, API_BASE_URL)}>
-                            <label>
-                                <span>ID:</span>
-                                <input type='text' name='id' value={id || ''} onChange={(e) => setId(e.target.value)} />
-                            </label>
-                            <input type='submit' value='Submit' />
-                        </form>
-                        </div>
+            <div id='content-container'>
+                <h1>FALKON</h1>
+                <div className='login-card'>
+                    <h1>Login de Usuário</h1>
+                    <form onSubmit={handleSubmit}>
+                        <label>
+                            <span>ID:</span>
+                            <input className='id' type='text' name='id' value={id || ''} onChange={(e) => setId(e.target.value)} />
+                        </label>
+                        <input className='btn-submit' type='submit' value='Submit' />
+                    </form>
+                    {message && <p className={success? 'auth-message': 'failed-message'}>{message}</p>}
                 </div>
             </div>
         </>
