@@ -10,9 +10,9 @@
 body {
     background-color: #ff5e97; 
     display: flex;
-    justify-content: center;  /* Centraliza horizontalmente */
-    align-items: center;      /* Centraliza verticalmente */
-    min-height: 100vh;        /* Força o body a ocupar a altura total da tela */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
     font-family: 'Arial', sans-serif;
 }

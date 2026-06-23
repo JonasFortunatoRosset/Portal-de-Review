@@ -112,7 +112,8 @@
       "quantidade": 1,
       "data": "2026-05-10",
       "status": "entregue",
-      "valor_pago": 350
+      "valor_pago": 350,
+      "avaliacao": 4.5
     },
     {
       "id": "102",
@@ -121,7 +122,8 @@
       "quantidade": 2,
       "data": "2026-05-24",
       "status": "pendente",
-      "valor_pago": 120
+      "valor_pago": 120,
+      "avaliacao": null
     },
     {
       "id": "103",
@@ -130,7 +132,48 @@
       "quantidade": 1,
       "data": "2026-05-25",
       "status": "entregue",
-      "valor_pago": 180
+      "valor_pago": 180,
+      "avaliacao": 4.0
+    },
+    {
+      "id": "104",
+      "usuarioId": "2",
+      "produtoId": "3",
+      "quantidade": 1,
+      "data": "2026-04-25",
+      "status": "entregue",
+      "valor_pago": 1200,
+      "avaliacao": null
+    },
+    {
+      "id": "105",
+      "usuarioId": "2",
+      "produtoId": "6",
+      "quantidade": 1,
+      "data": "2026-05-25",
+      "status": "entregue",
+      "valor_pago": 290,
+      "avaliacao": 4.7
+    },
+    {
+      "id": "106",
+      "usuarioId": "2",
+      "produtoId": "7",
+      "quantidade": 1,
+      "data": "2026-06-25",
+      "status": "entregue",
+      "valor_pago": 420,
+      "avaliacao": 4.2
+    },
+    {
+      "id": "107",
+      "usuarioId": "2",
+      "produtoId": "8",
+      "quantidade": 1,
+      "data": "2026-07-25",
+      "status": "entregue",
+      "valor_pago": 110,
+      "avaliacao": 2.0
     }
   ],
   "cupons": [

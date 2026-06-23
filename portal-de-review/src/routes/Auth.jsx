@@ -14,7 +14,7 @@ const Auth = ({API_BASE_URL}) => {
 
     useEffect(() => {
         if (success && user){
-            navigate(`/products/${user.id}`, { replace: true });
+            navigate(`/orders/${user.id}`, { replace: true });
         }
     }, [success, user]);
 

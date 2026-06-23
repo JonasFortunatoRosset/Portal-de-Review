@@ -7,7 +7,7 @@ import './index.css';
 import App from './App.jsx';
 import ErrorPage from './routes/ErrorPage.jsx';
 import Auth from './routes/Auth.jsx';
-import Products from './routes/Products.jsx';
+import Orders from './routes/Orders.jsx';
 
 import { API_BASE_URL } from './config.js';
 
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
       element: <Auth API_BASE_URL={API_BASE_URL} />,
       },
       {
-      path: 'products/:id',
-      element: <Products />,
+      path: 'orders/:id',
+      element: <Orders API_BASE_URL={API_BASE_URL} />,
       }
     ]
   }
