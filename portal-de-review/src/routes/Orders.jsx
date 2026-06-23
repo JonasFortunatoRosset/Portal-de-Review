@@ -1,5 +1,5 @@
 import "./Orders.css";
-import { useParams } from "react-router";
+import { useParams, Link } from "react-router";
 import useOrders from "../hooks/useOrders";
 
 const Orders = ({ API_BASE_URL }) => {
@@ -55,12 +55,12 @@ const Orders = ({ API_BASE_URL }) => {
                                         Já avaliou
                                     </span>
                                 ) : (
-                                    <span className="badge-danger">
+                                    <span className="badge-not-avaliated">
                                         Avalie e ganhe +5!
                                     </span>
                                 )}
-
-                                <div className="user-stars">
+                                <div className="stars-details-container">
+                                    <div className="user-stars">
                                     {[1, 2, 3, 4, 5].map((star) => (
                                         <span
                                             key={star}
@@ -73,6 +73,8 @@ const Orders = ({ API_BASE_URL }) => {
                                             ★
                                         </span>
                                     ))}
+                                    </div>
+                                    <Link className="details" state={{ orders: orders }} to={`details/${order.produtoId}`}>Detalhes</Link>
                                 </div>
                             </div>
                         </div>

@@ -117,7 +117,7 @@
     },
     {
       "id": "102",
-      "usuarioId": "3",
+      "usuarioId": "2",
       "produtoId": "4",
       "quantidade": 2,
       "data": "2026-05-24",
@@ -133,7 +133,7 @@
       "data": "2026-05-25",
       "status": "entregue",
       "valor_pago": 180,
-      "avaliacao": 4.0
+      "avaliacao": 4
     },
     {
       "id": "104",
@@ -163,7 +163,7 @@
       "data": "2026-06-25",
       "status": "entregue",
       "valor_pago": 420,
-      "avaliacao": 4.2
+      "avaliacao": null
     },
     {
       "id": "107",
@@ -173,7 +173,7 @@
       "data": "2026-07-25",
       "status": "entregue",
       "valor_pago": 110,
-      "avaliacao": 2.0
+      "avaliacao": 2
     }
   ],
   "cupons": [
